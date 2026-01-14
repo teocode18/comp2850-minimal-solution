@@ -23,6 +23,10 @@ dependencies {
     implementation("io.ktor:ktor-server-sessions-jvm:$ktorVersion")
     implementation("io.ktor:ktor-server-status-pages-jvm:$ktorVersion")
     implementation("io.ktor:ktor-server-call-logging-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-core:2.3.12")  
+    implementation("io.ktor:ktor-server-netty:2.3.12")
+    implementation("io.pebbletemplates:pebble:3.2.2")
+    implementation("ch.qos.logback:logback-classic:1.5.6")
 
     // Pebble templating
     implementation("io.pebbletemplates:pebble:$pebbleVersion")

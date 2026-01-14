@@ -271,7 +271,9 @@ fun Application.configureRouting() {
             }
             proceed()
         }
-
+        configureTaskRoutes()
+    }
+}
         // Static files (CSS, JS, HTMX library)
         staticResources("/static", "static")
 
