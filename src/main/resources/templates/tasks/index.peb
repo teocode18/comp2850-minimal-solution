@@ -16,6 +16,24 @@
         </p>
     </header>
 
+  {# Success / Status Message (Fix #3 - P4) #}
+<div id="status"
+     role="status"
+     aria-live="polite"
+     aria-atomic="true"
+     tabindex="-1">
+
+    {% if flashMessage and flashMessage != "" %}
+        <p class="notice"
+           style="background:#E8F2FF;
+                  border:2px solid #e2dd4a;
+                  color:#0B2F5F;">
+            {{ flashMessage }}
+        </p>
+    {% endif %}
+
+</div>
+
     {# Error Summary - Week 8 Lab 2 #}
     {% if error %}
     <div role="alert" aria-live="assertive" class="error-summary" id="error-summary" tabindex="-1">
@@ -85,7 +103,7 @@
     <section aria-labelledby="list-heading">
         <h2 id="list-heading">Your Tasks</h2>
 
-        <div id="task-area">
+        <div id="task-area" aria-live="polite" aria-atomic="true">
             {% include "tasks/_list.peb" %}
             {% include "tasks/_pager.peb" %}
         </div>
